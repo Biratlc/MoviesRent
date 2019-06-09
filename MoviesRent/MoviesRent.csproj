@@ -224,6 +224,26 @@
     <Compile Include="Migrations\201906090915231_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201906090915231_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906091033068_AddedNameOnMembershipType.cs" />
+    <Compile Include="Migrations\201906091033068_AddedNameOnMembershipType.Designer.cs">
+      <DependentUpon>201906091033068_AddedNameOnMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906091039362_SetNameOfMemberShipTYpe.cs" />
+    <Compile Include="Migrations\201906091039362_SetNameOfMemberShipTYpe.Designer.cs">
+      <DependentUpon>201906091039362_SetNameOfMemberShipTYpe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906091603282_fixingerror.cs" />
+    <Compile Include="Migrations\201906091603282_fixingerror.Designer.cs">
+      <DependentUpon>201906091603282_fixingerror.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906091625430_AddOptionalBirthDateType.cs" />
+    <Compile Include="Migrations\201906091625430_AddOptionalBirthDateType.Designer.cs">
+      <DependentUpon>201906091625430_AddOptionalBirthDateType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906091631265_UpdateDetailsController.cs" />
+    <Compile Include="Migrations\201906091631265_UpdateDetailsController.Designer.cs">
+      <DependentUpon>201906091631265_UpdateDetailsController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -332,6 +352,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906090915231_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201906090915231_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906091033068_AddedNameOnMembershipType.resx">
+      <DependentUpon>201906091033068_AddedNameOnMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906091039362_SetNameOfMemberShipTYpe.resx">
+      <DependentUpon>201906091039362_SetNameOfMemberShipTYpe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906091603282_fixingerror.resx">
+      <DependentUpon>201906091603282_fixingerror.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906091625430_AddOptionalBirthDateType.resx">
+      <DependentUpon>201906091625430_AddOptionalBirthDateType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906091631265_UpdateDetailsController.resx">
+      <DependentUpon>201906091631265_UpdateDetailsController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
