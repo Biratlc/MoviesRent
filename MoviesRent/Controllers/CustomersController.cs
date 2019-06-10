@@ -3,6 +3,8 @@ using System.Linq;
 using System.Web.Mvc;
 using MoviesRent.Models;
 using System.Data.Entity;
+using MoviesRent.ViewModels;
+
 
 namespace MoviesRent.Controllers
 {
@@ -22,8 +24,22 @@ namespace MoviesRent.Controllers
 
         public ActionResult New()
         {
-            return View();
+            var membershipTypes = _context.MembershipTypes.ToList(); ;
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+            return View("CustomerForm", viewModel);
         }
+
+        [HttpPost]
+        public ActionResult Create (Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Customers");
+        }
+
         public ViewResult Index()
         {
             var customers = _context.Customers.Include(c => c.MembershipType).ToList();
@@ -39,6 +55,21 @@ namespace MoviesRent.Controllers
                 return HttpNotFound();
 
             return View(customer);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new NewCustomerViewModel
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+            return View("CustomerForm", viewModel);
         }
 
     }
